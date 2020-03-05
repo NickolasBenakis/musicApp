@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# simpleMusic
 
-## Available Scripts
+<p align="center">
+  <img width="128" height="128" src="https://res.cloudinary.com/nickolasben/image/upload/v1583446773/music/gjkicgawjijo34ofwezw.png">
+</p>
 
-In the project directory, you can run:
+## Table of Contents
 
-### `yarn start`
+- [Intro](#intro)
+- [Install](#install)
+- [Build](#build)
+- [Deploy](#deploy)
+- [Run](#run)
+- [Optimizations](#Optimizations)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Intro
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Production built is deployed : https://simplemusic.surge.sh/
 
-### `yarn test`
+simpleMusic is a single page application that updates users.
+It is built in React with hooks and Context Api.[React.js](https://reactjs.org/).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `yarn build`
+- Built with bundler (create-react-app)
+- Mobile-first design
+- MediaPlayer
+- Persist state on refresh
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Install
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To install, `cd` to project root and run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm install
+```
 
-### `yarn eject`
+## Build
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To build for production, `cd` to project root and run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To run the app in development, `cd` to project root and run:
 
-## Learn More
+```
+$ npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deploy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Deploy this application with
 
-### Code Splitting
+```
+$ npm run deploy
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Optimizations
 
-### Analyzing the Bundle Size
+A few optimizations have been implemented to help improve the performance of the app, including:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Global State with React Hooks ,Context Api with redux pattern [Action,Reducer,State].
+- React.memo and useMemo for Optimal re-rendering
