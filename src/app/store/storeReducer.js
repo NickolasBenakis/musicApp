@@ -37,6 +37,8 @@ export function reducer(state, action) {
 				track => track.id === action.payload
 			);
 			if (
+				Object.values(selectedTrack).length &&
+				Object.values(state.currentTrack).length &&
 				JSON.stringify(selectedTrack) === JSON.stringify(state.currentTrack)
 			) {
 				return {
@@ -66,7 +68,23 @@ export function reducer(state, action) {
 				controls: { ...state.controls, play: action.payload }
 			};
 		case NEXT_TRACK:
+			const nextTrack = state.currentAlbum.tracks.find(
+				track => track.index === action.payload
+			);
+			if (nextTrack === undefined) {
+				return state;
+			} else {
+				return { ...state, currentTrack: nextTrack };
+			}
 		case PREV_TRACK:
+			const prevTrack = state.currentAlbum.tracks.find(
+				track => track.index === action.payload
+			);
+			if (prevTrack === undefined) {
+				return state;
+			} else {
+				return { ...state, currentTrack: prevTrack };
+			}
 		default:
 			return state;
 	}
