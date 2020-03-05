@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/NickolasBenakis/musicApp.svg?branch=master)](https://travis-ci.com/NickolasBenakis/musicApp)
+
 # simpleMusic
 
 <p align="center">
