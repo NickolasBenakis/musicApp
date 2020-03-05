@@ -51,10 +51,20 @@ export function reducer(state, action) {
 				};
 			}
 		case SELECT_ALBUM:
-			const album = state.albums.find(album => album.id === action.payload);
-			return { ...state, currentAlbum: album };
+			const selectedAlbum = state.albums.find(
+				album => album.id === action.payload
+			);
+			return { ...state, currentAlbum: selectedAlbum };
 		case PLAY_TRACK:
+			return {
+				...state,
+				controls: { ...state.controls, play: action.payload }
+			};
 		case PAUSE_TRACK:
+			return {
+				...state,
+				controls: { ...state.controls, play: action.payload }
+			};
 		case NEXT_TRACK:
 		case PREV_TRACK:
 		default:
