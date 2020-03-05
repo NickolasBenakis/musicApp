@@ -5,7 +5,8 @@ import {
 	PAUSE_TRACK,
 	PLAY_TRACK,
 	NEXT_TRACK,
-	PREV_TRACK
+	PREV_TRACK,
+	PERSIST_STATE
 } from './index';
 
 export const initialState = {
@@ -85,6 +86,11 @@ export function reducer(state, action) {
 			} else {
 				return { ...state, currentTrack: prevTrack };
 			}
+		case PERSIST_STATE:
+			const currentAlbId = state.albums.find(
+				album => album.id === action.payload
+			);
+			return { ...state, currentAlbum: currentAlbId };
 		default:
 			return state;
 	}
