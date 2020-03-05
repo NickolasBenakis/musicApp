@@ -1,3 +1,5 @@
+@import '../../../theme/variables.scss';
+
 .main {
     text-align: center;
     margin: 200px auto;
@@ -10,5 +12,22 @@
         justify-content: space-between;
         padding: 10px 200px;
 
+        @media screen and (max-width: $lg) and (min-width: $md) {
+            flex-direction: column;
+            padding: 10 100px;
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (max-width: $md) {
+            flex-direction: column;
+            padding: 10px;
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (max-width: $md) and (min-width: $sm) {
+            flex-direction: column;
+            padding: 10px 100px;
+            flex-wrap: nowrap;
+        }
     }
 }
