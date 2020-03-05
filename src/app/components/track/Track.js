@@ -31,11 +31,7 @@ const Track = ({ track, albumPhoto }) => {
 		<Fragment>
 			<li className='list-group-item' onClick={handleTrack}>
 				<div className='list-group-item__info'>
-					<image
-						src={albumPhoto || ''}
-						alt='album-photo'
-						className='album-photo'
-					/>
+					<img src={albumPhoto || ''} alt='album' className='album-photo' />
 					<span className='list-group-item__info-details'>
 						<p>{track.title}</p>
 						<p className='text-muted'>{track.artist}</p>
