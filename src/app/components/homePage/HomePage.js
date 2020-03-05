@@ -1,10 +1,14 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 
 const HomePage = () => {
     return (
-        <div>
-            
-        </div>
+		<Fragment>
+			<main className='main'>
+				<section className='main__section container-fluid'>
+                    
+				</section>
+			</main>
+		</Fragment>
     )
 }
 

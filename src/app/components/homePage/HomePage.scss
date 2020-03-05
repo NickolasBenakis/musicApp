@@ -1,0 +1,14 @@
+.main {
+    text-align: center;
+    margin: 200px auto;
+    max-width: 1024px;
+
+    &__section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px 200px;
+
+    }
+}
