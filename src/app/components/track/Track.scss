@@ -13,32 +13,29 @@
         background-color: $hoverCard;
     }
 
-    &__info {
-        &-details {}
-
-        .control-logo {
-            position: absolute;
-            top: 30%;
-            right: -10px;
-            width: 50px;
-            height: 50px;
-            background-color: $controlColor;
-            border-radius: 50%;
-            transition: all .1s ease-in;
-        }
-    }
-
-    .album-photo {
-        width: 128px;
-        height: 128px;
-        float: left;
-
-        @media screen and (max-width: $md) {
-            width: 45px;
-            height: 45px;
-        }
+    .control-logo {
+        position: absolute;
+        top: 30%;
+        right: -10px;
+        width: 50px;
+        height: 50px;
+        background-color: $controlColor;
+        border-radius: 50%;
+        transition: all .1s ease-in;
     }
 }
+
+.album-photo {
+    width: 128px;
+    height: 128px;
+    float: left;
+
+    @media screen and (max-width: $md) {
+        width: 45px;
+        height: 45px;
+    }
+}
+
 
 .active {
     opacity: 1;

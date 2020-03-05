@@ -4,7 +4,7 @@ import { SELECT_TRACK } from '../../store/index';
 import playIcon from '../../../theme/play.svg';
 import pauseIcon from '../../../theme/pause.svg';
 import classNames from 'classnames';
-
+import './Track.scss';
 const Track = ({ track, albumPhoto }) => {
 	const { state, dispatch } = React.useContext(Store);
 
