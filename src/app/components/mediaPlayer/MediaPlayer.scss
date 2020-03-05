@@ -1,74 +1,73 @@
 @import '../../../theme/variables.scss';
 
 .media-player-container {
-    background-color: rgb(241, 243, 244);
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    left: 0;
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+	background-color: rgb(241, 243, 244);
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	padding: 20px 0;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
-    @media screen and (max-width: $sm) {
-        display: inline-block;
-    }
+	@media screen and (max-width: $sm) {
+		display: inline-block;
+	}
 
-    @media screen and (max-width: $md) and (min-width: $sm) {
-        display: inline-block;
-    }
+	@media screen and (max-width: $md) and (min-width: $sm) {
+		display: inline-block;
+	}
 
-    &__controls {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+	&__controls {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
 
-        @media screen and (max-width: $md) {
-            flex-direction: column;
-            align-items: center;
-        }
+		@media screen and (max-width: $md) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
 
-    }
+	.media-player {
+		padding: 10px;
+		border-radius: 24px;
+	}
 
-    .media-player {
-        padding: 10px;
-        border-radius: 24px;
-    }
+	.media-player-extra-buttons {
+		align-self: center;
+	}
 
-    .media-player-extra-buttons {
-        align-self: center;
-    }
+	.logo {
+		display: inline;
+		height: 64px;
+		width: 64px;
+	}
 
-    .logo {
-        display: inline;
-        height: 64px;
-        width: 64px;
-    }
+	.button-control-logo {
+		width: 12px;
+		height: 12px;
+		display: inline;
+		margin: 5px;
+		cursor: pointer;
+	}
 
-    .button-control-logo {
-        width: 12px;
-        height: 12px;
-        display: inline;
-        margin: 5px;
-        cursor: pointer;
-    }
+	.artwork-album {
+		width: 40px;
+		height: 40px;
+	}
 
-    .artwork-album {
-        width: 40px;
-        height: 40px;
-    }
+	.current-titles {
+		display: inline;
+		flex-direction: column;
+		font-size: $fontSm;
 
-    .current-titles {
-        display: inline;
-        flex-direction: column;
-        font-size: $fontSm;
-
-        span {
-            margin: 10px;
-        }
-    }
+		span {
+			margin: 10px;
+		}
+	}
 }
