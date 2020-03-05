@@ -33,6 +33,23 @@ export const initialState = {
 export function reducer(state, action) {
 	switch (action.type) {
 		case SELECT_TRACK:
+			const selectedTrack = state.currentAlbum.tracks.find(
+				track => track.id === action.payload
+			);
+			if (
+				JSON.stringify(selectedTrack) === JSON.stringify(state.currentTrack)
+			) {
+				return {
+					...state,
+					controls: { ...state.controls, play: !state.controls.play }
+				};
+			} else {
+				return {
+					...state,
+					currentTrack: selectedTrack,
+					controls: { ...state.controls, play: true }
+				};
+			}
 		case SELECT_ALBUM:
 			const album = state.albums.find(album => album.id === action.payload);
 			return { ...state, currentAlbum: album };
