@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './AlbumDetails.scss';
+import './Details.scss';
 import TrackList from '../trackList/TrackList';
 
 const Details = () => {

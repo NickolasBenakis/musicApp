@@ -2,13 +2,14 @@ import React, { Fragment } from 'react';
 import { Store } from '../../store/storeContext';
 import { Link } from 'react-router-dom';
 import './Album.scss';
+import { SELECT_ALBUM } from '../../store/index';
 
 const Album = ({ album }) => {
 	const { dispatch } = React.useContext(Store);
 
 	const handleClick = e => {
 		dispatch({
-			type: 'SELECT_ALBUM',
+			type: SELECT_ALBUM,
 			payload: album.id
 		});
 	};
