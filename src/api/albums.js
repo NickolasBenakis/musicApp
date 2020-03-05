@@ -82,8 +82,8 @@ export const ALBUMS = [
 			{
 				id: 'T30',
 				index: 0,
-				title: 'song1',
-				artist: 'Nick',
+				title: 'Special',
+				artist: 'JazzMan',
 				genre: 'Jazz',
 				photo:
 					'https://res.cloudinary.com/nickolasben/image/upload/v1583335630/music/wk4pjdpixfqjmj5fnv0p.jpg',
