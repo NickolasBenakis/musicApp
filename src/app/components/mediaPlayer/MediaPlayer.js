@@ -1,23 +1,47 @@
 import React, { Fragment } from 'react';
 import './MediaPlayer.scss';
+import { Store } from '../../store/storeContext';
+import {
+	PLAY_TRACK,
+	PAUSE_TRACK,
+	NEXT_TRACK,
+	PREV_TRACK
+} from '../../store/index';
 import nextLogo from '../../../theme/next.svg';
 import previousLogo from '../../../theme/previous.svg';
 import mockAlbumLogo from '../../../theme/album.svg';
 const MediaPlayer = () => {
 	const audioRef = React.useRef(null);
+	const { state, dispatch } = React.useContext(Store);
 
 	const pauseTrack = () => {
 		console.log('pause');
+		dispatch({
+			type: PAUSE_TRACK,
+			payload: false
+		});
 	};
 	const playTrack = () => {
 		console.log('play');
+		dispatch({
+			type: PLAY_TRACK,
+			payload: true
+		});
 	};
 
 	const playNextTrack = () => {
 		console.log('next');
+		dispatch({
+			type: NEXT_TRACK,
+			payload: state.currentTrack.index + 1
+		});
 	};
 	const playPrevTrack = () => {
 		console.log('prev');
+		dispatch({
+			type: PREV_TRACK,
+			payload: state.currentTrack.index - 1
+		});
 	};
 
 	return (
