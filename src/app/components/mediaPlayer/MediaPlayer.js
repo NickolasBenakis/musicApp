@@ -13,6 +13,20 @@ import mockAlbumLogo from '../../../theme/album.svg';
 const MediaPlayer = () => {
 	const audioRef = React.useRef(null);
 	const { state, dispatch } = React.useContext(Store);
+	const trackIdRef = React.useRef('');
+
+	React.useEffect(() => {
+		console.log('change track');
+		if (
+			state.currentTrack.source !== audioRef.current.src ||
+			state.currentTrack.id !== trackIdRef.current
+		) {
+			audioRef.current.src = state.currentTrack.source || '';
+			trackIdRef.current = state.currentTrack.id;
+		}
+		console.log('change controls');
+		state.controls.play ? audioRef.current.play() : audioRef.current.pause();
+	}, [state.currentTrack, state.controls]);
 
 	const pauseTrack = () => {
 		console.log('pause');
@@ -73,6 +87,10 @@ const MediaPlayer = () => {
 						alt='next'
 						className='button-control-logo'
 						onClick={playNextTrack}></img>
+				</div>
+				<div className='current-titles'>
+					<span className='text-muted'>{state.currentTrack.artist || ''}</span>
+					<span>{state.currentTrack.title || ''}</span>
 				</div>
 			</header>
 		</Fragment>
