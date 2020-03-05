@@ -14,4 +14,4 @@ const AlbumList = () => {
 	);
 };
 
-export default AlbumList;
+export default React.memo(AlbumList);

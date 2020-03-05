@@ -18,4 +18,4 @@ const Details = () => {
 	);
 };
 
-export default Details;
+export default React.memo(Details);

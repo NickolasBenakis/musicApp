@@ -22,4 +22,4 @@ const TrackList = () => {
 	);
 };
 
-export default TrackList;
+export default React.memo(TrackList);

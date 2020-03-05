@@ -16,7 +16,6 @@ const MediaPlayer = () => {
 	const trackIdRef = React.useRef('');
 
 	React.useEffect(() => {
-		console.log('change track');
 		if (
 			state.currentTrack.source !== audioRef.current.src ||
 			state.currentTrack.id !== trackIdRef.current
@@ -24,19 +23,16 @@ const MediaPlayer = () => {
 			audioRef.current.src = state.currentTrack.source || '';
 			trackIdRef.current = state.currentTrack.id;
 		}
-		console.log('change controls');
 		state.controls.play ? audioRef.current.play() : audioRef.current.pause();
 	}, [state.currentTrack, state.controls]);
 
 	const pauseTrack = () => {
-		console.log('pause');
 		dispatch({
 			type: PAUSE_TRACK,
 			payload: false
 		});
 	};
 	const playTrack = () => {
-		console.log('play');
 		dispatch({
 			type: PLAY_TRACK,
 			payload: true
@@ -44,14 +40,12 @@ const MediaPlayer = () => {
 	};
 
 	const playNextTrack = () => {
-		console.log('next');
 		dispatch({
 			type: NEXT_TRACK,
 			payload: state.currentTrack.index + 1
 		});
 	};
 	const playPrevTrack = () => {
-		console.log('prev');
 		dispatch({
 			type: PREV_TRACK,
 			payload: state.currentTrack.index - 1
@@ -74,7 +68,7 @@ const MediaPlayer = () => {
 					ref={audioRef}
 					onPause={pauseTrack}
 					onPlay={playTrack}>
-					<source crossOrigin='anonymous' src type='audio/mp3' />
+					<source crossOrigin='anonymous' src='' type='audio/mp3' />
 				</audio>
 				<div className='media-player-extra-buttons'>
 					<img

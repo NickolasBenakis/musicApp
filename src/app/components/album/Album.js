@@ -31,4 +31,4 @@ const Album = ({ album }) => {
 	);
 };
 
-export default Album;
+export default React.memo(Album);

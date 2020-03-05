@@ -43,4 +43,4 @@ const Track = ({ track, albumPhoto }) => {
 	);
 };
 
-export default Track;
+export default React.memo(Track);
