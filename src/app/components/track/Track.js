@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import { Store } from '../../store/storeContext';
 import { SELECT_TRACK } from '../../store/index';
+import playIcon from '../../../theme/play.svg';
+import pauseIcon from '../../../theme/pause.svg';
+import classNames from 'classnames';
 
 const Track = ({ track, albumPhoto }) => {
 	const { state, dispatch } = React.useContext(Store);
@@ -11,6 +14,18 @@ const Track = ({ track, albumPhoto }) => {
 			payload: track.id
 		});
 	};
+
+	const applySvg = () => {
+		if (state.controls.play && state.currentTrack.id === track.id) {
+			return pauseIcon;
+		} else {
+			return playIcon;
+		}
+	};
+
+	const logoClass = classNames('control-logo', {
+		active: track.id === state.currentTrack.id
+	});
 
 	return (
 		<Fragment>
@@ -24,6 +39,7 @@ const Track = ({ track, albumPhoto }) => {
 					<span className='list-group-item__info-details'>
 						<p>{track.title}</p>
 						<p className='text-muted'>{track.artist}</p>
+						<img src={applySvg()} alt='logo-player' className={logoClass} />
 					</span>
 				</div>
 			</li>
