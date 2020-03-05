@@ -63,7 +63,7 @@ const MediaPlayer = () => {
 			<header className='media-player-container'>
 				<div className='artwork-container'>
 					<img
-						src={mockAlbumLogo}
+						src={state.currentTrack.photo || mockAlbumLogo}
 						alt='artwork-album'
 						className='artwork-album'
 					/>
