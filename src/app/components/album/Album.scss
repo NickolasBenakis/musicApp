@@ -1,22 +1,28 @@
 @import '../../../theme/variables.scss';
 
 .card {
-	border: none;
-	margin: 15px;
-	flex-basis: 40%;
-	cursor: pointer;
-	box-shadow: $cardShadow;
-	transition: all 0.3s ease-in-out;
+    border: none;
+    margin: 15px;
+    flex-basis: 40%;
+    cursor: pointer;
+    box-shadow: $cardShadow;
+    transition: all 0.3s ease-in-out;
 
-	&:hover {
-		box-shadow: $cardShadowHover;
-	}
+    &:hover {
+        box-shadow: $cardShadowHover;
+    }
 
-	@media screen and (max-width: $md) {
-		flex-basis: 100%;
-	}
+    @media screen and (max-width: 991px) and (min-width: 771px) {
+        width: 250px;
+        margin: 20px auto;
+    }
+
+    @media screen and (max-width: $md) {
+        width: 250px;
+        margin: 20px auto;
+    }
 }
 
 .card-img-top {
-	height: 200px;
+    height: 200px;
 }
