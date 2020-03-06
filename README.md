@@ -19,7 +19,7 @@
 
 Production built is deployed : https://simplemusic.surge.sh/
 
-simpleMusic is a single page application that updates users.
+simpleMusic is a single page application that play music.
 It is built in React with hooks and Context Api.[React.js](https://reactjs.org/).
 
 ## Features
